@@ -1,0 +1,10 @@
+./spark-submit --class com.ibm.spark.exercise.mllib.KMeansClustering \
+ --master spark://<spark_master_node_ip>:7077 \
+ --num-executors 6 \
+--driver-memory 3g \
+--executor-memory 512m \
+--total-executor-cores 6 \
+ /home/fams/spark_exercise-1.0.jar \
+ hdfs://<hdfs_namenode_ip>:9000/user/fams/mllib/wholesale_customers_data_training.txt \
+ hdfs://<hdfs_namenode_ip>:9000/user/fams/mllib/wholesale_customers_data_test.txt \
+ 8 30 3

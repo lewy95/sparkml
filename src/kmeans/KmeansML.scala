@@ -12,8 +12,7 @@ object KmeansML {
       sys.exit(1)
     }
 
-    val conf = new
-        SparkConf().setAppName("first kmeans")
+    val conf = new SparkConf().setAppName("first kmeans")
     val sc = new SparkContext(conf)
 
     /**

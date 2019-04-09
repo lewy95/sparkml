@@ -1,3 +1,4 @@
+#kmeans
 ./spark-submit --class com.ibm.spark.exercise.mllib.KMeansClustering \
  --master spark://<spark_master_node_ip>:7077 \
  --num-executors 6 \

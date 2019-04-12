@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReaderFile {
+public class MyFileReader {
 
     public static String readFile(String fileName, String encoding) {
         File file = new File(fileName);

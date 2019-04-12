@@ -3,18 +3,18 @@ package fpgrowth.codebyjava;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FpTreeNode {
+public class FpTree {
 
     String idName;// id号
-    List<FpTreeNode> children;// 孩子结点
-    FpTreeNode parent;// 父结点
-    FpTreeNode next;// 下一个id号相同的结点
+    List<FpTree> children;// 孩子结点
+    FpTree parent;// 父结点
+    FpTree next;// 下一个id号相同的结点
     long count;// 出现次数
 
-    public FpTreeNode() {// 用于构造根结点
+    public FpTree() {// 用于构造根结点
         this.idName = null;
         this.count = -1;
-        children = new ArrayList<FpTreeNode>();
+        children = new ArrayList<FpTree>();
         next = null;
         parent = null;
     }
@@ -24,10 +24,10 @@ public class FpTreeNode {
      *
      * @param idName
      */
-    public FpTreeNode(String idName) {
+    public FpTree(String idName) {
         this.idName = idName;
         this.count = 1;
-        children = new ArrayList<FpTreeNode>();
+        children = new ArrayList<FpTree>();
         next = null;
         parent = null;
     }
@@ -38,10 +38,10 @@ public class FpTreeNode {
      * @param idName
      * @param count
      */
-    public FpTreeNode(String idName, long count) {
+    public FpTree(String idName, long count) {
         this.idName = idName;
         this.count = count;
-        children = new ArrayList<FpTreeNode>();
+        children = new ArrayList<FpTree>();
         next = null;
         parent = null;
     }
@@ -51,7 +51,7 @@ public class FpTreeNode {
      *
      * @param child
      */
-    public void addChild(FpTreeNode child) {
+    public void addChild(FpTree child) {
         children.add(child);
     }
 
@@ -71,11 +71,11 @@ public class FpTreeNode {
      *
      * @param next
      */
-    public void setNextNode(FpTreeNode next) {
+    public void setNextNode(FpTree next) {
         this.next = next;
     }
 
-    public void setParent(FpTreeNode parent) {
+    public void setParent(FpTree parent) {
         this.parent = parent;
     }
 
@@ -85,7 +85,7 @@ public class FpTreeNode {
      * @param index
      * @return
      */
-    public FpTreeNode getChilde(int index) {
+    public FpTree getChilde(int index) {
         return children.get(index);
     }
 
